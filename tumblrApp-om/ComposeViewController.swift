@@ -10,12 +10,17 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+    @IBOutlet weak var nevermindButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func onNevermindButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

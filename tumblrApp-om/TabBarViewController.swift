@@ -11,6 +11,7 @@ import UIKit
 class TabBarViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
@@ -42,10 +43,33 @@ class TabBarViewController: UIViewController {
         
     }
 
+    
     @IBAction func onHomeButton(sender: AnyObject) {
         println("a")
         homeViewController.view.frame = containerView.frame
         containerView.addSubview(homeViewController.view)
+    }
+    
+    @IBAction func onSearchButton(sender: AnyObject) {
+        println("b")
+        searchViewController.view.frame = containerView.frame
+        containerView.addSubview(searchViewController.view)
+    }
+    
+    @IBAction func onComposeButton(sender: AnyObject) {
+        performSegueWithIdentifier("composeSegue", sender: nil)
+    }
+    
+    @IBAction func onAccountButton(sender: AnyObject) {
+        println("c")
+        accountViewController.view.frame = containerView.frame
+        containerView.addSubview(accountViewController.view)
+    }
+    
+    @IBAction func onActivityButton(sender: AnyObject) {
+        println("d")
+        activityViewController.view.frame = containerView.frame
+        containerView.addSubview(activityViewController.view)
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,9 +10,12 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var feedImage: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        scrollView.contentSize = feedImage.frame.size
         // Do any additional setup after loading the view.
     }
 

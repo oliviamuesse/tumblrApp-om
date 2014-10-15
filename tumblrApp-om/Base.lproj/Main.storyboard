@@ -7,7 +7,7 @@
         <!--Compose View Controller-->
         <scene sceneID="CDb-fM-ClI">
             <objects>
-                <viewController id="TBp-j3-W8z" customClass="ComposeViewController" customModule="tumblrApp_om" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ComposeViewController" id="TBp-j3-W8z" customClass="ComposeViewController" customModule="tumblrApp_om" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kZ0-H3-Xfh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,10 +23,6 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link_icon" id="ZrO-cZ-A9c">
                                 <rect key="frame" x="16" y="261" width="75" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_icon" id="Eje-Ux-2im">
-                                <rect key="frame" x="123" y="125" width="75" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote_icon" id="RNI-rC-1uf">
@@ -51,11 +47,21 @@
                                     <action selector="onNevermindButton:" destination="TBp-j3-W8z" eventType="touchUpInside" id="zUr-S4-0hX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_icon" id="Eje-Ux-2im">
+                                <rect key="frame" x="123" y="125" width="75" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="chatButton" destination="5xU-Ow-WCq" id="5B5-y4-ejN"/>
+                        <outlet property="linkButton" destination="ZrO-cZ-A9c" id="OBi-zf-GrA"/>
                         <outlet property="nevermindButton" destination="jx9-Qa-Zr8" id="Zfr-Xs-wC0"/>
+                        <outlet property="photoButton" destination="Eje-Ux-2im" id="aXv-gt-BA2"/>
+                        <outlet property="quoteButton" destination="RNI-rC-1uf" id="6ck-X9-OCT"/>
+                        <outlet property="textButton" destination="zxG-q2-bk9" id="NaN-Rr-vwB"/>
+                        <outlet property="videoButton" destination="VoL-fb-E9K" id="TIp-AC-bFq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcF-21-7gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,71 +76,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" id="nfj-ct-9MA">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="iwb-Nw-oJW">
+                            <view contentMode="scaleToFill" id="CLP-JN-fXo" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="BsU-Yj-ftk">
+                                <rect key="frame" x="0.0" y="514" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="CLP-JN-fXo" userLabel="Container View">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="0Oe-yk-H3O" userLabel="homeButton">
+                                        <rect key="frame" x="19" y="11" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
+                                        <state key="normal" image="home_icon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="home_selected_icon"/>
+                                        <connections>
+                                            <action selector="onHomeButton:" destination="Iu4-Ur-2Qa" eventType="touchUpInside" id="MJE-0G-yPx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="058-ec-mhS" userLabel="searchButton">
+                                        <rect key="frame" x="75" y="11" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="search_icon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="search_selected_icon"/>
+                                        <connections>
+                                            <action selector="onSearchButton:" destination="Iu4-Ur-2Qa" eventType="touchUpInside" id="PFm-iV-Xdo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ffk-gE-FTa" userLabel="composeButton">
+                                        <rect key="frame" x="135" y="11" width="50" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.14117647707462311" green="0.21176472306251526" blue="0.31764706969261169" alpha="1" colorSpace="deviceRGB"/>
+                                        <state key="normal" image="compose_button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onComposeButton:" destination="Iu4-Ur-2Qa" eventType="touchUpInside" id="pXP-Pi-qSC"/>
+                                            <segue destination="TBp-j3-W8z" kind="modal" identifier="ComposeSegue" id="cRx-UP-syg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="3il-5Q-QLf" userLabel="trendingButton">
+                                        <rect key="frame" x="273" y="10" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="trending_icon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="trending_selected_icon"/>
+                                        <connections>
+                                            <action selector="onActivityButton:" destination="Iu4-Ur-2Qa" eventType="touchUpInside" id="mfi-d5-juP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="yXj-Q9-Feg" userLabel="accountButton">
+                                        <rect key="frame" x="214" y="12" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="account_icon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="account_selected_icon"/>
+                                        <connections>
+                                            <action selector="onAccountButton:" destination="Iu4-Ur-2Qa" eventType="touchUpInside" id="WBf-hc-GHv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Oe-yk-H3O" userLabel="homeButton">
-                                <rect key="frame" x="15" y="527" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="home_icon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onHomeButton:" destination="Iu4-Ur-2Qa" eventType="touchUpInside" id="MJE-0G-yPx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="058-ec-mhS" userLabel="searchButton">
-                                <rect key="frame" x="70" y="528" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="search_icon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSearchButton:" destination="Iu4-Ur-2Qa" eventType="touchUpInside" id="PFm-iV-Xdo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ffk-gE-FTa" userLabel="composeButton">
-                                <rect key="frame" x="135" y="527" width="50" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="compose_button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onComposeButton:" destination="Iu4-Ur-2Qa" eventType="touchUpInside" id="pXP-Pi-qSC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yXj-Q9-Feg" userLabel="accountButton">
-                                <rect key="frame" x="216" y="528" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="account_icon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onAccountButton:" destination="Iu4-Ur-2Qa" eventType="touchUpInside" id="WBf-hc-GHv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3il-5Q-QLf" userLabel="trendingButton">
-                                <rect key="frame" x="274" y="528" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="trending_icon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onActivityButton:" destination="Iu4-Ur-2Qa" eventType="touchUpInside" id="mfi-d5-juP"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" red="0.20472367018462789" green="0.25418934080071259" blue="0.33117426658163263" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -142,10 +151,9 @@
                         <outlet property="accountButton" destination="yXj-Q9-Feg" id="vzX-wg-QHm"/>
                         <outlet property="composeButton" destination="ffk-gE-FTa" id="u0f-Cy-flZ"/>
                         <outlet property="containerView" destination="CLP-JN-fXo" id="fRo-44-n6I"/>
-                        <outlet property="scrollView" destination="iwb-Nw-oJW" id="1Zb-Ui-RU8"/>
+                        <outlet property="homeButton" destination="0Oe-yk-H3O" id="u2h-OL-iiz"/>
                         <outlet property="searchButton" destination="058-ec-mhS" id="ySJ-fI-PlV"/>
                         <outlet property="trendingButton" destination="3il-5Q-QLf" id="RaV-19-cFg"/>
-                        <segue destination="TBp-j3-W8z" kind="modal" identifier="composeSegue" id="rrO-oL-Y3H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJ1-3s-fq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -220,12 +228,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="8tf-g6-aHZ" userLabel="Container View">
-                                        <rect key="frame" x="0.0" y="70" width="320" height="448"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" id="S5J-62-WYk">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" id="S5J-62-WYk">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
@@ -242,6 +245,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="homeView" destination="S5J-62-WYk" id="wBY-PL-IWc"/>
+                        <outlet property="scrollView" destination="hxk-vY-Zvq" id="BN5-pM-TIv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88w-Rj-v4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,7 +293,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZKo-Dp-3m1">
-                                        <rect key="frame" x="46" y="411" width="108" height="46"/>
+                                        <rect key="frame" x="44" y="395" width="108" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.20146177262842285" green="0.49604252591188569" blue="0.72379225127551017" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
@@ -296,7 +303,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GRe-DL-5UG">
-                                        <rect key="frame" x="168" y="410" width="108" height="46"/>
+                                        <rect key="frame" x="170" y="395" width="108" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.19804107722634512" green="0.27793718862005445" blue="0.40529336734693877" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
@@ -305,17 +312,17 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check out this tab when you make a post to see Likes, redblogs, and new followers." textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zw5-p1-cQh">
-                                        <rect key="frame" x="14" y="302" width="292" height="94"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="activity_icon_bl" id="XhX-fm-452">
+                                        <rect key="frame" x="136" y="228" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check out this tab when you make a post to see Likes, Redblogs, and new followers." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zw5-p1-cQh">
+                                        <rect key="frame" x="21" y="286" width="280" height="94"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="activity_icon_bl" id="XhX-fm-452">
-                                        <rect key="frame" x="136" y="255" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </scrollView>
@@ -331,12 +338,14 @@
     <resources>
         <image name="account" width="320" height="524"/>
         <image name="account_icon" width="35" height="35"/>
+        <image name="account_selected_icon" width="35" height="35"/>
         <image name="activity_icon_bl" width="50" height="50"/>
         <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>
+        <image name="home_selected_icon" width="35" height="35"/>
         <image name="home_spinner" width="146" height="146"/>
         <image name="link_icon" width="75" height="95"/>
         <image name="nevermind" width="320" height="53"/>
@@ -344,9 +353,11 @@
         <image name="quote_icon" width="75" height="96"/>
         <image name="search_feed" width="320" height="524"/>
         <image name="search_icon" width="35" height="35"/>
+        <image name="search_selected_icon" width="35" height="35"/>
         <image name="text_icon" width="75" height="95"/>
         <image name="trending_feed" width="320" height="1217"/>
         <image name="trending_icon" width="35" height="35"/>
+        <image name="trending_selected_icon" width="35" height="35"/>
         <image name="video_icon" width="75" height="95"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

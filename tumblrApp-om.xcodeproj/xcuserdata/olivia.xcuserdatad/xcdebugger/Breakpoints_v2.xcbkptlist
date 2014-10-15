@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tumblrApp-om/ComposeViewController.swift"
-            timestampString = "434873610.04164"
+            timestampString = "435039736.057014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "ComposeViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,13 +26,101 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tumblrApp-om/ComposeViewController.swift"
-            timestampString = "434873610.04164"
+            timestampString = "435039736.057014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "ComposeViewController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tumblrApp-om/TabBarViewController.swift"
+            timestampString = "435038425.848898"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "TabBarViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tumblrApp_om.TabBarViewController.homeButton.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIButton&gt;"
+                  moduleName = "tumblrApp-om"
+                  urlString = "file:///Users/olivia/Git/codePath/tumblrApp-om/tumblrApp-om/TabBarViewController.swift"
+                  timestampString = "435035301.823239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tumblrApp_om.TabBarViewController.homeButton.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIButton&gt;"
+                  moduleName = "tumblrApp-om"
+                  urlString = "file:///Users/olivia/Git/codePath/tumblrApp-om/tumblrApp-om/TabBarViewController.swift"
+                  timestampString = "435035301.825551"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tumblrApp_om.TabBarViewController.init (tumblrApp_om.TabBarViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; tumblrApp_om.TabBarViewController"
+                  moduleName = "tumblrApp-om"
+                  urlString = "file:///Users/olivia/Git/codePath/tumblrApp-om/tumblrApp-om/TabBarViewController.swift"
+                  timestampString = "435035301.825693"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tumblrApp_om.TabBarViewController.init (tumblrApp_om.TabBarViewController.Type)() -&gt; tumblrApp_om.TabBarViewController"
+                  moduleName = "tumblrApp-om"
+                  urlString = "file:///Users/olivia/Git/codePath/tumblrApp-om/tumblrApp-om/TabBarViewController.swift"
+                  timestampString = "435035301.825802"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "147">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tumblrApp_om.TabBarViewController.init (tumblrApp_om.TabBarViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; tumblrApp_om.TabBarViewController"
+                  moduleName = "tumblrApp-om"
+                  urlString = "file:///Users/olivia/Git/codePath/tumblrApp-om/tumblrApp-om/TabBarViewController.swift"
+                  timestampString = "435035301.825902"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "169">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

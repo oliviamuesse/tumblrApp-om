@@ -98,8 +98,8 @@
 				45D6F89919EB7E2F0032E2E9 /* ComposeViewController.swift */,
 				45D6F89B19EB7E9F0032E2E9 /* FeedViewController.swift */,
 				45D6F89D19EB7ECA0032E2E9 /* AccountViewController.swift */,
-				45D6F89F19EB87D90032E2E9 /* SearchViewController.swift */,
 				45D6F8A119EB881C0032E2E9 /* ActivityViewController.swift */,
+				45D6F89F19EB87D90032E2E9 /* SearchViewController.swift */,
 				45D6F87919EB6B950032E2E9 /* Main.storyboard */,
 				45D6F87C19EB6B950032E2E9 /* Images.xcassets */,
 				45D6F87E19EB6B950032E2E9 /* LaunchScreen.xib */,
@@ -433,6 +433,7 @@
 				45D6F89119EB6B960032E2E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45D6F89219EB6B960032E2E9 /* Build configuration list for PBXNativeTarget "tumblrApp-omTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +442,7 @@
 				45D6F89419EB6B960032E2E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

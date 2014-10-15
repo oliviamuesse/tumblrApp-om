@@ -12,3 +12,5 @@ Exercise Hours: 7+
 
 - Optional: Login button should show animate the login form over the view controller.
 - Optional: Discover bubble should bob up and down unless the SearchViewController is tapped.
+
+![alt tag](tumblrApp-om.gif)
